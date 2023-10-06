@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #navbar{
+            display: flex;
+            justify-content: space-around;
+            background-color: teal;
+            padding: 20px;
+        }
+        #navbar>div{
+            color: white;
+            cursor: pointer;
+            
+        }
+        a{
+            text-decoration: none;
+            color: wheat;
+        }
+    </style>
+</head>
+<body>
+    <div id = "navbar">
+        <div><a href="mens.html">Mens</a></div>
+        <!-- <div><a href="womens.html">Womens</a></div>
+        <div><a href = "kids.html">Kids</a></div> -->
+        <div><a href="health.html">Health</a></div>
+        <div onclick="window.location.href='womens.html'">Womens</div>
+        <div id = "kids">Kids</div>
+    </div>
+</body>
+</html>
+
+<script>
+    // 1. anchor
+    // 2. onclick we should not use this onClick 
+    // 3. eventlistner("click")
+    // Either use anchor tag or eventlistner
+
+     document.querySelector("#kids").addEventListener("click", kidsPage)
+
+     function kidsPage()
+     {
+        window.location.href = "kids.html"
+     }
+</script>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5InputBoxes</title>
+</head>
+<body>
+    <form id = "details">
+        <input id = "name" type = "text" placeholder="Enter a name"/>
+        <input id = "age" type = "number" placeholder="Enter age"/>
+        <select id="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <input id = "mblNumber" type = "text" placeholder="Enter Mobile No."/>
+        <input id = "email" type = "email" placeholder="Enter your Email"/>
+        <input type = "submit" value = "Login"/>
+    </form>
+</body>
+</html>
+
+<script>
+    
+    document.querySelector("#details").addEventListener("submit", myFunction);
+
+    function myFunction()
+    {
+        event.preventDefault();
+        // console.log("inside a function");
+
+        var name = document.querySelector("#name").value;
+        // console.log(name);
+
+        var age = document.querySelector("#age").value;
+        var gender = document.querySelector("#gender").value;
+        var mbl = document.querySelector("#mblNumber").value;
+        var email = document.querySelector("#email").value;
+
+        console.log(name, age, gender, mbl, email);
+    }
+</script>

@@ -1,0 +1,21 @@
+var n = 5;
+
+for(var i=1; i<=n; i++)
+{
+  var str = "";
+  for(var j=1; j<=i; j++)
+  {
+    str +=  "-";  // increasing hill pattern
+  }
+  // console.log(str);
+  for(var k=i; k<n; k++)
+  {
+    str = str + "*";  // decreasing hill pattern
+  }
+  // console.log(str);
+  for(var l=i; l<=n; l++)
+  {
+    str = str + "*";  // decreasing hill pattern
+  }
+  console.log(str);
+}

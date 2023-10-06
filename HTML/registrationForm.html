@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegistrationForm</title>
+    <style>
+        #container{
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <input type="text" id = "name" placeholder="Enter Student Name">
+    <input type="number" id = "number" placeholder="Enter your Roll no.">
+    <input type="submit" value = "Submit">
+
+    <div id = "container">
+
+    </div>
+</form>
+</body>
+</html>
+<script>
+
+    // 20-26- obj = {name: udit, roll: 100} - 32 - studentData=[{name: udit, roll: 100}]
+    // - 39 - 43 - 
+   document.querySelector("form").addEventListener("submit", addStudent);
+    
+   var studentData = [];
+
+   function addStudent()
+   {
+    event.preventDefault();
+     document.querySelector("#name").value;
+     document.querySelector("#number").value;
+    // console.log(name, roll);
+var obj = 
+    {
+     name: document.querySelector("#name").value,
+     roll: document.querySelector("#number").value, 
+    };
+    // console.log(obj);
+    studentData.push(obj);
+    // console.log(studentData);
+
+    displayStudent(studentData)
+
+   }
+
+   function displayStudent(studentData)
+   {
+
+    console.log(studentData);
+    document.querySelector("#container").innerText = "";
+    studentData.forEach(function (elem){
+        var box = document.createElement("div");
+       var name = document.createElement("p");
+       name.innerText = elem.name;
+
+       var rollNum = document.createElement("p");
+       rollNum.innerText = elem.roll;
+
+       box.append(name,rollNum);
+       document.querySelector("#container").append(box);
+    })
+   }
+</script>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+            margin-bottom: 60px;
+            color: mediumpurple;
+        }
+
+        #container {
+            height: 400px;
+            width: 50%;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            margin: auto;
+            padding-top: 30px;
+            border-radius: 10px;
+        }
+
+        #display {
+            height: 15%;
+            width: 80%;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            margin: auto;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #keyboard {
+            /* border: 1px solid black; */
+            height: 250px;
+            width: 80%;
+            margin: auto;
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 62px);
+            gap: 10px;
+        }
+
+        #keyboard>div {
+            /* border: 1px solid black; */
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            font-size: 20px;
+        }
+
+        .signBox {
+            background-color: beige;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>My Calculator</h1>
+    <div id="container">
+        <div id="display"></div>
+        <div id="keyboard">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="signBox">+</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+            <div class="signBox">-</div>
+            <div class="box">7</div>
+            <div class="box">8</div>
+            <div class="box">9</div>
+            <div class="signBox">*</div>
+            <div class="signBox">AC</div>
+            <div class="box">0</div>
+            <div class="signBox">=</div>
+            <div class="signBox">/</div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    var nums = document.querySelectorAll("#keyboard>div");
+    //  console.log(nums);
+    var bag = document.querySelector("#display");
+    
+    for (var i = 0; i < nums.length; i++) {
+        nums[i].addEventListener("click", myCalculator);
+    }
+    
+    function myCalculator() {
+        var targetNumber = event.target.innerText;
+       
+        switch (targetNumber) {
+            case "AC":
+                bag.innerText = "";
+                break;
+            case "=":
+                if (!bag.innerText) break;
+                bag.innerText = eval(bag.innerText);
+                break;
+            default:
+                bag.innerText = bag.innerText + targetNumber;
+        }
+
+    }
+</script>

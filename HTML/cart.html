@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShoppingCart</title>
+    <style>
+        #container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+        }
+        .innerDiv{
+           display: flex;
+           justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+    <form>
+    <input type="text" id = "img" placeholder="Enter image URL"/>
+    <input type="text" id = "pName" placeholder="Enter name of product"/>
+    <input type="text" id = "pPrice" placeholder="Enter price of product"/>
+    <input type="text" id="stOffPrice" placeholder="Enter strikedOff price"/>
+    <input type="submit" value = "Add product"/>
+    </form>
+    <div id = "container">
+
+    </div>
+</body>
+</html>
+<script>
+    var data = [
+        {
+            imgUrl: 
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnnE0qRM-vajWNvGWGHh5ceAEOMnh3UtK7Vy8D4WdijA&s",
+            productName: "Latest Bag",
+            price: "$15.oo",
+            strikedOffPrice: "$5.00",
+        },
+        {
+            imgUrl: 
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnnE0qRM-vajWNvGWGHh5ceAEOMnh3UtK7Vy8D4WdijA&s",
+            productName: "Latest Bag",
+            price: "$15.oo",
+            strikedOffPrice: "$5.00",
+        },
+        {
+            imgUrl: 
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnnE0qRM-vajWNvGWGHh5ceAEOMnh3UtK7Vy8D4WdijA&s",
+            productName: "Latest Bag",
+            price: "$15.oo",
+            strikedOffPrice: "$5.00",
+        },
+        {
+            imgUrl: 
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnnE0qRM-vajWNvGWGHh5ceAEOMnh3UtK7Vy8D4WdijA&s",
+            productName: "Latest Bag",
+            price: "$15.oo",
+            strikedOffPrice: "$5.00",
+        },
+
+    ];
+
+    var adminData = [];
+
+    document.querySelector("form").addEventListener("submit", addData)
+
+    function addData()
+    {
+        event.preventDefault();
+
+        var obj = {
+            imgUrl :  document.querySelector("#img").value,
+            productName : document.querySelector("#pName").value,
+            price : document.querySelector("#pPrice").value,
+            strikedOffPrice : document.querySelector("#stOffPrice").value
+
+        };
+
+        adminData.push(obj);
+        // console.log(admindata);
+
+        displayData(adminData)
+    }
+
+    function displayData(adminData)
+    {
+        adminData.forEach(function(elem){
+        // console.log(elem); it is running 4 times
+
+        var div = document.createElement("div")
+
+        var img = document.createElement("img")
+        img.src = elem.imgUrl
+
+        var name = document.createElement("p")
+        name.innerText = elem.productName
+        
+        var priceDiv = document.createElement("div");
+        priceDiv.setAttribute("class", "innerDiv")
+
+        var productPrice = document.createElement("p")
+        productPrice.innerText = elem.price
+
+        var strkOff = document.createElement("p")
+        strkOff.innerText = elem.strikedOffPrice
+        strkOff.style.textDecoration = "Line-through"
+
+        priceDiv.append(productPrice,strkOff)
+        div.append(img,name,priceDiv)
+
+        document.querySelector("#container").append(div);
+
+
+
+
+    });
+    }
+
+    
+</script>

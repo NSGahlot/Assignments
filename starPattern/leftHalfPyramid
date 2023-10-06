@@ -1,0 +1,33 @@
+// var n = 5; 
+// for(var i=0; i<n; i++)
+// {
+//   var str = "";
+//   for(var j=i; j<n; j++)
+//   {
+//     str = str + " ";
+//   }
+//   // console.log(str);
+//   var str = "";
+//   for(var k=0; k<=i; k++)
+//   {
+//     str = str + "*";
+//   }
+//   console.log(str);
+// }
+
+var n = 5; 
+for(var i=0; i<n; i++)
+{
+  var str = "";
+  for(var j=i; j<n; j++)
+  {
+    str = str + " ";
+  }
+  // console.log(str);
+  var str1 = "";
+  for(var k=0; k<=i; k++)
+  {
+    str = str + "*";
+  }
+  console.log(str);
+}

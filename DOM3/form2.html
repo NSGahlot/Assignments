@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to use form</title>
+</head>
+<body>
+    <form id = "formTag">
+        <input id = "name" type="text" placeholder="enter a name"/>
+        <input id = "age" type="number" placeholder="enter a age">
+        <select id="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <input type="submit"/>
+    </form>
+</body>
+</html>
+
+<script>
+    // Points for using form
+    // 1. wrap every input inside form tag
+    // 2. instead of taking button, use input type = submit
+    // 3. Add eventListener to form tag
+    // 4. event name should be submit
+    // 5. whenever we use form, it will try to send some data to backendend 
+    //    to sever, in this process page is getting refresh.
+    // 6. It is default behaviour 
+    // 7. we should prevent the dafault behaviour
+    // 8. To prevent this default behaviour we should use -->
+    //    event.preventDefault();
+
+    document.querySelector("#formTag").addEventListener("submit", myFunction);
+    function myFunction()
+    {
+        // console.log("inside my function");
+        event.preventDefault();
+        // console.log("inside fun");
+
+        var name = document.querySelector("#name").value
+        console.log(name);
+
+        var age = document.querySelector("#age").value
+        console.log(age);
+        
+    }
+</script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+    <form>
+        <input id = "image" type = "text" placeholder="Enter image URL"/>
+        <input type="text" id = "product" placeholder="Enter name of product"/>
+        <input type="text" id="price" placeholder="Enter price of product"/>
+        <input type="text" id="strkOffPrice" placeholder="Enter strikedoff price"/>
+        <input type="submit"  value="Add Product"/>
+    </form>
+</body>
+</html>
+<script>
+
+    var adminData = [];
+    document.querySelector("form").addEventListener("submit", addData)
+     
+     function addData()
+     {
+        event.preventDefault();
+
+        var obj = {
+            itemImage: document.querySelector("#image").value,
+            itemProduct: document.querySelector("#product").value,
+            itemPrice: document.querySelector("#price").value,
+            itemStrkOffPrice: document.querySelector("#strkOffPrice").value
+
+        };
+
+        adminData.push(obj);
+        console.log(adminData);
+        
+
+     }
+</script>

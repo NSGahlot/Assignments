@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+       <input id = "name" type = "text" placeholder="Enter student name"/>
+       <input id = "roll" type = "number" placeholder="Enter roll number"/>
+       <input type = "submit" value = "Submit"/>
+    </form>
+</body>
+</html>
+
+<script>
+    document.querySelector("form").addEventListener("submit", addStudent);
+
+    // var studentData = [{name: "shanu", roll: "100"}, {}] 
+
+    var studentData = []
+
+    // Now we have to create object for this empty array.
+     
+    function addStudent()
+    {
+        event.preventDefault();
+
+        var obj = {
+            name: document.querySelector("#name").value,
+            roll: document.querySelector("#roll").value,
+        };
+
+        // console.log(obj);
+        studentData.push(obj);
+
+        console.log(studentData);
+
+        
+
+    }
+</script>

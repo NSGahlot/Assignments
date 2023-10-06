@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Manipulation</title>
+</head>
+<body>
+    <h1 id = "firstname">Hello</h1>
+    <div id = "lastname">MASAI</div>
+    <p id = "fullname">fullname</p>
+    <hr/>
+    <button onclick="setFirstName()">FIRSTNAME</button>
+    <button onclick="setLastName()">LASTNAME</button>
+    <button onclick="setFullName()">FULLNAME</button>
+    <button onclick="resetDefaults()">RESET DEFAULTS</button>
+</body>
+</html>
+<script type = "text/javascript">
+function setFirstName()
+{
+    document.getElementById("firstname").innerText = "Narendra";
+}
+function setLastName()
+{
+    document.getElementById("lastname").innerText = "Singh";
+}
+function setFullName()
+{
+    document.getElementById("fullname").innerText = "Narendra Singh";
+}
+function resetDefaults()
+{
+    // console.log("first");
+   setName('firstname','hello')
+    // document.getElementById("firstname").innerText = "Hello";
+    // console.log("second");
+}
+function setName(id, value)
+{
+document.getElementById(id).innerText = value;
+}
+</script>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data</title>
+</head>
+<body>
+    <form>
+        <input type = "text" id = "studName" placeholder="Enter student name"/>
+        <input type = "number" id = "studRoll" placeholder="Enter roll number"/>
+        <input type = "submit" value = "Submit"/>
+    </form>
+
+    <div id = "container"></div>
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit", addStudent);
+
+    var studentData = [];
+
+    function addStudent()
+    {
+        event.preventDefault();
+        var obj = {
+            name: document.querySelector("#studName").value,
+            roll: document.querySelector("#studRoll").value,
+        };
+
+        // console.log(obj);
+        studentData.push(obj);
+        // console.log(studentData);
+
+        displayStudents(studentData)
+    }
+
+    function displayStudents(studentData)
+    {
+         document.querySelector("#container").innerText = "";
+
+        studentData.forEach(function(elem){
+            var box = document.createElement("div");
+
+            var name = document.createElement("p");
+            name.innerText = elem.name
+            
+            var roll = document.createElement("p");
+            roll.innerText = elem.roll
+
+            box.append(name, roll);
+
+            document.querySelector("#container").append(box);
+        })
+    }
+</script>

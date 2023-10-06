@@ -1,0 +1,22 @@
+var n = 4;
+var space = 2*(n-1);
+for(var i=1; i<=n; i++)
+{
+  var str = "";
+  for(var j=1; j<=i; j++)
+  {
+    str += j;
+  }
+  // console.log(str); numbers
+  for(var k=1; k<=space; k++)
+  {
+    str += " ";
+  }
+  // console.log(str);
+  for(var l=i; l>=1; l--)
+  {
+    str += l;
+  }
+  console.log(str);
+  space = space - 2;
+}

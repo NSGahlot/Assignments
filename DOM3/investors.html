@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display : grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id = "container"></div>
+</body>
+</html>
+<script>
+    var investors = [{
+
+    }]
+
+    investors.map(function(elem){
+    var box = document.createElement("div");
+    var img = document.createElement("img");
+    img.src = elem.image;
+    
+
+    var companyName = document.createElement("h4");
+    companyName.innerText = elem.role;
+    
+    box.append(img);
+
+    document.querySelector("#container").append(box);
+
+    })
+</script>

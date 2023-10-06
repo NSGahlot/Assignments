@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuerySelector</title>
+</head>
+<body>
+    <p>I am para</p>  
+    <h1 id="head">I am heading 1</h1>
+    <div class = "box">I am div</div>
+</body>
+</html>
+<script>
+    // //getElementById
+    // var x = document.getElementById("head")
+    // console.log(x);
+
+
+    // //getElementsByClassName
+    // var y = document.getElementsByClassName("box")
+    // console.log(y);
+
+
+    // // getElementByTag
+
+    // var z = document.getElementsByTagName("p")
+    // console.log(z);
+
+
+
+    //Now we will use quesrySelector
+
+    var x = document.querySelector("#head");
+    console.log(x);
+
+    var y = document.querySelector(".box");
+    console.log(y);
+
+    var z = document.querySelector("p");
+    console.log(z);
+</script>

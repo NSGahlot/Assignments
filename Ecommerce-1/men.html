@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+            color: blueviolet;
+        }
+        #container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+
+        }
+        img{
+            height: 200px;
+
+        }
+
+        @media all and (min-width: 80px) and (max-width: 400px){
+            #container{
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+            
+        
+    </style>
+</head>
+<body>
+    <button><a href="cart.html">Go to Cart</a></button>
+    <h1>Mens Page</h1>
+    <div id = "container"></div>
+</body>
+</html>
+<script>
+    var mensData = [
+        {
+            image_url: "https://m.media-amazon.com/images/I/81dRV+F3rVL._AC_UL600_FMwebp_QL65_.jpg",
+            name: "SWADESI STUFF",
+            price: 699,
+            strikedoffprice: 999,
+        },
+
+        {
+            image_url: "https://m.media-amazon.com/images/I/81dRV+F3rVL._AC_UL600_FMwebp_QL65_.jpg",
+            name: "SWADESI STUFF",
+            price: 699,
+            strikedoffprice: 999,
+        },
+
+        {
+            image_url: "https://m.media-amazon.com/images/I/81dRV+F3rVL._AC_UL600_FMwebp_QL65_.jpg",
+            name: "SWADESI STUFF",
+            price: 699,
+            strikedoffprice: 999,
+        },
+
+        {
+            image_url: "https://m.media-amazon.com/images/I/81dRV+F3rVL._AC_UL600_FMwebp_QL65_.jpg",
+            name: "SWADESI STUFF",
+            price: 699,
+            strikedoffprice: 999,
+        },
+
+        {
+            image_url: "https://m.media-amazon.com/images/I/81dRV+F3rVL._AC_UL600_FMwebp_QL65_.jpg",
+            name: "SWADESI STUFF",
+            price: 699,
+            strikedoffprice: 999,
+        },
+    ]
+
+
+    var cartData = JSON.parse(localStorage.getItem("cart")) || []
+    mensData.map(function(elem){
+        var box = document.createElement("div");
+
+        var img = document.createElement("img")
+        img.src = elem.image_url
+        
+        var name = document.createElement("p")
+        name.innerText = elem.name
+        
+        var price = document.createElement("p")
+        price.innerText = elem.price
+       
+        var btn = document.createElement("button")
+        btn.innerText = "Add to Cart"
+
+        btn.addEventListener("click", function(){
+            addToCart(elem)
+        })
+ 
+        var strkOffPrice = document.createElement("p")
+        strkOffPrice.innerText = elem.strikedoffprice
+
+        box.append(img, name, price, strkOffPrice, btn)
+        document.querySelector("#container").append(box)
+    })
+
+    function addToCart(elem){
+        // console.log(elem);
+        cartData.push(elem);
+
+        localStorage.setItem("cart", JSON.stringify(cartData))
+    }
+</script>

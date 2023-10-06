@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    // strings
+    // localStorage.setItem("key", "value")
+    localStorage.setItem("name1", "shanu")
+
+    localStorage.setItem("name2", "chotu")
+
+    // localStorage.setItem("name1", "narendra")
+    // it's a key value pair u can't have duplicate key similar to object
+
+    // syntax for getting name
+    // localStorage.getItem("key")
+
+   var name1 =  localStorage.getItem("name1")
+
+//    console.log(name1);
+
+   var name2 = localStorage.getItem("name2")
+
+   console.log(name2);
+
+  //numbers
+
+  localStorage.setItem("mobilenum", "1324647")
+  
+  localStorage.setItem("cvv", 524)
+
+  var cvvName = localStorage.getItem("cvv")
+  console.log(cvvName)
+
+  // Arrays
+
+  var names = ["shanu", "chotu", "tinku"]
+  localStorage.setItem("namesArray", JSON.stringify(names))
+
+  // JSON --> universal data of format
+  // JSON --> c, c++, java,
+  // Across all the language JSON format is there, it is globally accepted
+
+//   var namesFromStorage = localStorage.getItem("namesArray")
+//   console.log(namesFromStorage)
+
+var namesFromStorage = JSON.parse(localStorage.getItem("namesArray"))
+// console.log(namesFromStorage);
+
+var obj = {name: "Shanu", place: "Bangalore"}  // value
+localStorage.setItem("myObj", JSON.stringify(obj)) // "myObj" ---> key
+
+var resultObject = JSON.parse(localStorage.getItem("myObj"))
+console.log(resultObject)
+
+
+</script>

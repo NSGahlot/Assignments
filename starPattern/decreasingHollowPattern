@@ -1,0 +1,26 @@
+var n = 5;
+for(var i=1; i<=n; i++)
+{
+    var str = "";
+    for(var j=i; j<n; j++)
+    {
+        str += "-";
+    }
+    // console.log(str);
+    for(var k=1; k<=i; k++)
+    {
+        if(i===n || j===n)
+        {
+            str += "*"
+        }
+        else{
+            str += " "
+        }
+        
+    }
+    console.log(str);
+    
+    
+    
+    
+}

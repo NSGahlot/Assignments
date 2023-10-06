@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    //  var btn1 = document.createElement("button")
+    //  btn1.textContent = "Primary";
+    //  btn1.style.backgroundColor = "blue"
+    //  btn1.style.color = "white";
+    //  btn1.style.borderRadius = "5px";
+
+    //  var btn2 = document.createElement("button")
+    //  btn2.textContent = "Secondary";
+    //  btn2.style.backgroundColor = "grey"
+    //  btn2.style.color = "white";
+    //  btn2.style.borderRadius = "5px";
+
+    var buttonObj = [
+        {textContent: "Primary", color: "White", backgroundColor: "Blue"},
+        {textContent: "Secondary", color: "White", backgroundColor: "grey"},
+        {textContent: "Primary", color: "White", backgroundColor: "Blue"},
+        {textContent: "Secondary", color: "White", backgroundColor: "grey"},
+        {textContent: "Primary", color: "White", backgroundColor: "Blue"},
+        {textContent: "Secondary", color: "White", backgroundColor: "grey"},
+        {textContent: "Primary", color: "White", backgroundColor: "Blue"},
+        {textContent: "Secondary", color: "White", backgroundColor: "grey"},
+        {textContent: "Primary", color: "White", backgroundColor: "Blue"},
+        
+]
+// for(var i=0; i<9; i++)
+//     {
+//         var btn1 = document.createElement("button")
+//         btn1.textContent = "Primary";
+//         btn1.style.backgroundColor = "blue"
+//         btn1.style.color = "white";
+//         btn1.style.borderRadius = "5px";
+//         document.querySelector("body").append(btn1);
+//     }
+
+buttonObj.map(function(ele, index, arr){
+// console.log(ele.textContent);
+        var btn1 = document.createElement("button")
+        btn1.textContent = ele.textContent;
+        btn1.style.backgroundColor = ele.backgroundColor;
+        btn1.style.color = ele.color;
+        btn1.style.borderRadius = "5px";
+        document.querySelector("body").append(btn1);
+
+})
+
+     
+</script>

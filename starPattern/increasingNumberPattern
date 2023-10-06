@@ -1,0 +1,12 @@
+var n = 5;
+var num = 1;
+for(var i=1; i<=n; i++)
+{
+  var str = "";
+  for(var j=1; j<=i; j++)
+  {
+    str = str + num + " ";
+    num = num + 1;
+  }
+  console.log(str);
+}

@@ -1,0 +1,107 @@
+.parentclass{
+    height: 300px;
+    width: 60%;
+    /* border: 1px solid black; */
+    margin: auto;
+    display: flex;
+  }
+  .leftchildclass{
+    height: 100%;
+    width: 14%;
+    border: 1px solid black;
+  }
+  .leftchildbox1{
+    height: 40px;
+    width: 100%;
+    border: 1px solid red;
+    display:  flex;
+  }
+  .hbox{
+    height: 30px;
+        width: 30px;
+        border: 1px solid black;
+        margin-top: 5px;
+        margin-left: 5px;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        color: white;
+        background-color: red;
+  }
+  .leftminibox1{
+    height: 30px;
+        width: 30px;
+        border: 1px solid black;
+        margin-top: 5px;
+        margin-left: 5px;
+        background-color: green;
+    }
+    .leftminibox2{
+        height: 30px;
+        width: 30px;
+        border: 1px solid black;
+        margin-top: 5px;
+        margin-left: 5px;
+        background-color: orangered;
+    }
+    .leftminibox3{
+        height: 30px;
+        width: 30px;
+        border: 1px solid black;
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+    .middlechildclass{
+        height: 100%;
+        width: 40%;
+        border: 1px solid black;
+        }
+        .middlebigbox{
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            margin-top: 15px;
+            background-color: greenyellow;
+        }
+        .samecolorbox{
+            height: 40px;
+            width: 90%;
+            border: 1px solid black;
+            margin-top: 2px;
+            display: flex;
+        }
+        .samecolorbox1{
+        height: 30px;
+        width: 40%;
+        border: 1px solid black;
+        margin-top: 5px;
+        margin-left: 5px;
+        background-color: blueviolet;
+        }
+        .rightchildclass{
+            height: 100%;
+            width: 40%;
+            border: 1px solid black;
+        }
+        .rightchildclass1{
+            height: 40px;
+        width: 90%;
+        border: 1px solid black;
+        }
+        .rightchildclass2{
+            height: 40px;
+        width: 90%;
+        border: 1px solid black;
+        display: flex;
+        }
+        .grandrightchild{
+            height: 30px;
+        width: 30px;
+        border: 1px solid black;
+        margin-top: 5px;
+        margin-left: 5px;
+        }
+
+
+

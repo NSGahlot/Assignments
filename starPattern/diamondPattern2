@@ -1,0 +1,44 @@
+var n = 5;
+for(var i=1; i<=n; i++)
+{
+  var str = "";
+  for(var j=i; j<=n; j++)
+  {
+    str += "*";
+  }
+  for(var j=1; j<i; j++)
+  {
+    str += " ";
+  }
+  for(var k=1; k<i; k++)
+  {
+    str += " ";
+  }
+  for(var l=i; l<=n; l++)
+{
+  str += "*";
+}
+  console.log(str);
+}
+
+for(var i=1; i<=n; i++)
+{
+  var str = "";
+  for(var j=1; j<=i; j++)
+  {
+    str += "*";
+  }
+  for(var k=i; k<n; k++)
+  {
+    str += " "
+  }
+  for(var l=i; l<n; l++)
+  {
+    str += " ";
+  }
+  for(var h=1; h<=i; h++)
+  {
+    str += "*";
+  }
+  console.log(str);
+}

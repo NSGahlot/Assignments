@@ -1,0 +1,16 @@
+var n = 5;
+
+for(var i=1; i<=n; i++)
+{
+    var str = "";
+    for(var j=i; j<=n; j++)
+    {
+        str += "-";    // decreasing triangle
+    }
+    // console.log(str);
+    for(var k=1; k<=n; k++)
+    {
+        str += "*";   
+    }
+    console.log(str);
+}

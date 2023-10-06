@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetAttribute</title>
+    <style>
+        .g-image{
+           height: 300px;
+           width: 300px;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // setAttributes
+    // Syntax ---> setAttribute("attributeName", "value")
+    var image = document.createElement("img");
+    // image.src = 
+    // "https://cdn-prod.medicalnewstoday.com/content/images/articles/325/325466/man-walking-dog.jpg"
+   
+    // Here scr is also a attribute so we can also use
+    
+    image.setAttribute("src", "https://cdn-prod.medicalnewstoday.com/content/images/articles/325/325466/man-walking-dog.jpg")
+    image.setAttribute("alt", "google-image");
+
+    // class and id are common attribute for every tag.
+    
+    image.setAttribute("class", "g-image")
+    
+    document.querySelector("body").append(image);
+
+    
+</script>
